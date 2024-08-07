@@ -16,7 +16,7 @@ function SolicitarDatosA(){
                 datosA = parseInt(prompt("Ingresa un número para el conjuto A en la posición " + (i + 1) + ": "), 10);
                 // Verifica si la entrada es un número válido y está en el rango permitido
                 if (isNaN(datosA) || i > 0 && datosA < conjuntoA[i-1]) {
-                    console.log("Por favor ingrese un número válido, el número debe de ser mayor o igual al anterior");
+                    console.log("Por favor ingrese un número válido, el número debe de ser mayor o igual al anterior -> "+ conjuntoA[i-1]);
                 }
             } while (isNaN(datosA) || i > 0 && datosA < conjuntoA[i-1]); // Repite si la entrada no es válida
             conjuntoA.push(datosA); // Agrega la edad válida al array
@@ -37,10 +37,10 @@ function SolicitarDatosB(){
                 // Solicita la entrada del usuario
                 datosB = parseInt(prompt("Ingresa un número para el conjuto B en la posición " + (i + 1) + ": "), 10)
                 // Verifica si la entrada es un número válido y está en el rango permitido
-                if (isNaN(datosB)) {
-                    console.log("Por favor ingrese un número válido");
+                if (isNaN(datosB) || i > 0 && datosB < conjuntoB[i-1]) {
+                    console.log("Por favor ingrese un número válido, el número debe de ser mayor o igual al anterior -> "+ conjuntoB[i-1]);
                 }
-            } while (isNaN(datosB)); // Repite si la entrada no es válida
+            } while (isNaN(datosB) || i > 0 && datosB < conjuntoB[i-1]); // Repite si la entrada no es válida
             conjuntoB.push(datosB); // Agrega la edad válida al array
         }
     }else{
