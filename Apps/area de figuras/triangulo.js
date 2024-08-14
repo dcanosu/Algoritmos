@@ -1,3 +1,4 @@
+//Install → npm install prompt-sync
 const prompt = require('prompt-sync')({sigint: true});
 
 // Función para validar si el valor es un número

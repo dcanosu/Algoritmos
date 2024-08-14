@@ -38,10 +38,12 @@ function agregarPersona() {
 
 //La función mostrarPersona permite mostrar la información de una persona particular por su posición en el array.
 function mostrarPersona() {
-    console.log(decorador)
+    let decoradorTitulo = ("=".repeat(85))
+    console.log(decoradorTitulo)
     let posicion = parseInt(prompt("Ingrese un número entre 0 a " + (personas.length - 1) + " para visualizar los datos de la persona ingresada: " ));
-    console.log(decorador)
+    console.log(decoradorTitulo)
     if (posicion >= 0 && posicion < personas.length) {
+        let decorador = ("=".repeat(35))
         console.log(decorador)
         console.log("Información de la persona:");
         console.log(decorador)
@@ -55,13 +57,14 @@ function mostrarPersona() {
 
 //La función mostrarMenu muestra el menú de opciones y retorna la opción seleccionada por el usuario.
 function mostrarMenu() {
-    console.log(decorador)
-    console.log("                        Menú");
-    console.log(decorador)
+    let decoradorMenu = ("=".repeat(70))
+    console.log(decoradorMenu)
+    console.log("                                 MENÚ");
+    console.log(decoradorMenu)
     console.log("1. Agregar una persona");
     console.log("2. Mostrar la información de una persona por su posición en el vector");
     console.log("3. Salir");
-    console.log(decorador)
+    console.log(decoradorMenu)
     let opcion = prompt("Ingrese una opción: ");
     return opcion;
 }
